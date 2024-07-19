@@ -2,16 +2,17 @@
 
 [info]
 # The advertised URL for the Nostr websocket.
-relay_url = "wss://nostr.example.com/"
+relay_url = "wss://relay.grapevine.social/"
 
 # Relay information for clients.  Put your unique server name here.
-name = "nostr-rs-relay"
+name = "Grapevine Relay"
 
 # Description
-description = "A newly created nostr-rs-relay.\n\nCustomize this with your own info."
+description = "a relay to keep track of your web of trust"
 
 # Administrative contact pubkey (32-byte hex, not npub)
 #pubkey = "0c2d168a4ae8ca58c9f1ab237b5df682599c6c7ab74307ea8b05684b60405d41"
+pubkey = "e5272de914bd301755c439b88e6959a43c9d2664831f093c51e9c799a16a102f"
 
 # Administrative contact URI
 #contact = "mailto:contact@example.com"
@@ -35,7 +36,7 @@ description = "A newly created nostr-rs-relay.\n\nCustomize this with your own i
 # Directory for SQLite files.  Defaults to the current directory.  Can
 # also be specified (and overriden) with the "--db dirname" command
 # line option.
-#data_directory = "."
+data_directory = "/opt/nostr-data/"
 
 # Use an in-memory database instead of 'nostr.db'.
 # Requires sqlite engine.
@@ -82,14 +83,14 @@ description = "A newly created nostr-rs-relay.\n\nCustomize this with your own i
 
 [network]
 # Bind to this network address
-address = "0.0.0.0"
+address = "127.0.0.1"
 
 # Listen on this port
 port = 8080
 
 # If present, read this HTTP header for logging client IP addresses.
 # Examples for common proxies, cloudflare:
-#remote_ip_header = "x-forwarded-for"
+remote_ip_header = "x-forwarded-for"
 #remote_ip_header = "cf-connecting-ip"
 
 # Websocket ping interval in seconds, defaults to 5 minutes
