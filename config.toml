@@ -2,9 +2,13 @@
 
 [info]
 # The advertised URL for the Nostr websocket.
+#relay_url = "wss://relay.tapestry.ninja/"
+#relay_url = "wss://relay.brainstorm.ninja/"
 relay_url = "wss://relay.grapevine.social/"
 
 # Relay information for clients.  Put your unique server name here.
+#name = "Tapestry Relay"
+#name = "brainSToRm relay"
 name = "Grapevine Relay"
 
 # Description
@@ -153,7 +157,20 @@ reject_future_seconds = 1800
 
 # Event kind allowlist. Events other than these kinds will be discarded.
 #event_kind_allowlist = [
-#    0, 1, 2, 3, 7, 40, 41, 42, 43, 44, 30023, 9902, 39902,
+#    0, 1, 2, 3, 7, 40, 41, 42, 43, 44, 30023,
+#]
+# brainSToRm, grapevine, tapestry, concept graph event kinds:
+# profile info: 0
+# profile follows: 3
+# profile mutes: 10000
+# likes: 7
+# wiki, as per NIP-54: 30818
+# NIP-51 lists (old standard, being deprecated): 10000, 10001, 30000, 30001
+# NIP-51 sets (new standard; incomplete list of kinds; may not employ)
+# 30003, bookmark set, parameterized replaceable
+# concept graph: 9902, 39902
+#event_kind_allowlist = [
+#    0, 3, 7, 9902, 10000, 30818, 39902,
 #]
 
 # Rejects imprecise requests (kind only and author only etc)
